@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+}
+
+.jumbotron {
+    height: 35vh;
+    background-image: url("../images/dolly-jumbo.jpg");
+
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 960px;
+}
+
+#main {
+    height: auto;
+    padding: 20px;
+    clear: left;
+}
+
+#sec-1 {
+    max-height: 10px;
+}
+
+.profile-pic {
+    float: left;
+    margin: 0 20px 20px 0;
+}    
+
+.align-cntr {
+    text-align: center;
+}
