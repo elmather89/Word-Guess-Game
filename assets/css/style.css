@@ -1,11 +1,27 @@
 body {
-    background-color: black;
+    background-color: cornflowerblue;
 }
 
 .jumbotron {
-    height: 35vh;
-    background-image: url("../images/dolly-jumbo.jpg");
+    width: 100%;
+    background-color: peachpuff;
+    padding: 30px 0 30px 0;
+    /*background-image: url(/assets/images/dolly-jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
 
+
+
+.img-responsive {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px;
+}
+
+.clearfix {
+    margin: 0 auto;
+    overflow: auto;
 }
 
 #wrapper {
@@ -30,5 +46,13 @@ body {
 }    
 
 .align-cntr {
+    text-align: center;
+}
+
+.dolly-hd {
+    padding: 25px 0 25px 0;
+    color: beige;
+    font-family: cursive;
+    font-size: 50px;
     text-align: center;
 }
