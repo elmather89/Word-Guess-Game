@@ -2,16 +2,19 @@ body {
     background-color: cornflowerblue;
 }
 
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(177, 203, 252);
+}
+
 .jumbotron {
     width: 100%;
-    background-color: peachpuff;
-    padding: 30px 0 30px 0;
+    background-color: black;
+    padding: 0;
     /*background-image: url(/assets/images/dolly-jumbotron.jpg);
     background-repeat: no-repeat;
     background-size: cover;*/
 }
-
-
 
 .img-responsive {
     margin: 0 auto;
@@ -27,13 +30,14 @@ body {
 #wrapper {
     margin: 0 auto;
     padding: 0;
-    width: 960px;
 }
 
 #main {
+    width: 100%;
     height: auto;
     padding: 20px;
     clear: left;
+    background-color: rgb(40, 76, 141);
 }
 
 #sec-1 {
