@@ -3,21 +3,19 @@
 // VARIABLES===============================================
 
 var jolene = ["j", "o", "l", "e", "n", "e"];
-var userGuess = prompt("Guess a letter!");
 var userGuessLower = userGuess.toLowerCase();
+var userGuessUpper = userGuess.toUpperCase();
 var score = 0;
-var remaining = 0;
+var remaining = 7;
 
 // FUNCTIONS =================
 
 if (jolene.indexOf(userGuessLower) === -1) {
     //alert("Nope, try again!");
-    for (var i = 0; i < (jolene.length + 5); i++) {
-        var letterBtn = document.createElement('div');
-        console.log(userGuessLower);
-    }
+    var chances = document.getElementById("remaining").innerHTML = remaining - 1;
+    var lettersUsed = document.getElementById("letters-used").innerHTML = userGuessUpper;
 }
+
 else {
-    alert("Great job!");
-    console.log(userGuessLower);
+    var wins = document.getElementById("wins").innerHTML = score + 1;
 }
