@@ -16,16 +16,19 @@
     //else if, subtract from remaing chances
 
 
-// VARIABLES===============================================
 
-//var jolene = ["j", "o", "l", "e", "n", "e"];
-//var userGuess = prompt("Guess a letter!");
-//var userGuessLower = userGuess.toLowerCase();
-//var score = 0;
-//var remaining = 0;
+$(document).ready(function() {
+
+    // VARIABLES===============================================
+
+var jolene = ["j", "o", "l", "e", "n", "e"];
+var userGuess = prompt("Guess a letter!");
+var userGuessLower = userGuess.toLowerCase();
+var score = 0;
+var remaining = 0;
 
 // FUNCTIONS =================
-/*
+
 if (jolene.indexOf(userGuessLower) === -1) {
     alert("Nope, try again!");
 }
@@ -36,20 +39,31 @@ else {
 for (var i = 0; i < jolene.length; i++) {
     console.log(userGuessLower);
     
-}*/
+}
 
+
+/*
 $(document).ready(function() {
 
 // VARIABLES ==================================
 
 var jolene = ["j", "o", "l", "e", "n", "e"];
+var joleneText = ["jolene"];
 
 for (var i = 0; i <= (jolene.length - 1); i++) {
     var letterBtn = $("<button>");
     letterBtn.addClass("letter-button letter letter-button-color"); 
     letterBtn.attr("data-letter", jolene[i]);
-    letterBtn.text(jolene[i]);
+    letterBtn.text(joleneText[i]);
     $("#current-word").append(letterBtn);
+    console.log(letterBtn);
 }
 
-};
+$(".letter-button").on("click", function() {
+    var wordBlanks = $("<div>");
+    wordBlanks.addClass("letter fridge-color");
+    wordBlanks.text($(this).attr("data-letter"));
+    $("#current-word").append(wordBlanks);
+})
+
+}
