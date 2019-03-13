@@ -5,18 +5,18 @@ var songs = [
     "9 to 5"
 ];
 
-// randomly select an array value
-var songs = songs[Math.floor(Math.random() * songs.length)];
-
 // creates an array with no values yet, loops thru the 3 values in var song, replaces the arrays' value
 // with the underscore mark.
 var answerAray = [];
 for (var i = 0; i < songs.length; i++) {
+    // randomly select an array value
+    var random = Math.floor(Math.random() * 3);
+
     answerAray[i] = "_";
 }
 
 // generate the underscores in the current-word div
-$(".current-word").append(answerAray);
+document.getElementById("current-word")
 
 // if user clicks letter that matches songs
 
@@ -27,7 +27,7 @@ var remainingLetters = songs.length;
 // while the remainingLetters is greater than 0...
 while (remainingLetters > 0) {
     // display the underscore in the corresponding div. =========== REDO LINE BELOW 
-    
+
     //alert(answerAray.join(" "));
 
     // prompts user to input letter ========== REDO LINE BELOW

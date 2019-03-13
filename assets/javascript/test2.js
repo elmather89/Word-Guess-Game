@@ -1,4 +1,13 @@
 $(document).ready(function () {
+      // songs
+      var song1 = ["j", "o", "l", "e", "n", "e"];
+      var song2 = ["i", "s", "l", "a", "n", "d", "s", " ", "i", "n", " ", "t", "h", "e", " ", "s", "t", "r", "e", "a", "m"];
+      var song3 = ["9", " ", "t", "o", " ", "5"];
+
+      // List of all 3 songs
+      var allSongs = [song1, song2, song3];
+
+
     // The array of songs for game
     var songs = ["jolene", "islands in the stream", "9 to 5"];
 
@@ -14,11 +23,22 @@ $(document).ready(function () {
     // FUNCTIONS
     // ==============================================================================
 
-    // Function to render questions.
+    // Function to render songs.
     function renderSongs() {
+
+        var randomSong = allSongs[Math.floor(Math.random() * allSongs.length)];
+        console.log(randomSong);
+
+        // creates an array with no values yet, loops thru the 3 values in var song, replaces the arrays' value
+        // with the underscore mark.
+        var answerAray = [];
+        for (var i = 0; i < randomSong.length; i++) {
+            answerAray[i] = "_";
+        }
+
         // If there are still more questions, render the next one.
-        if (songsIndex <= (songs.length - 1)) {
-            document.querySelector("#current-word").innerHTML = songs[songsIndex];
+        if (songsIndex <= (allSongs.length - 1)) {
+            document.querySelector("#current-word").innerHTML = answerAray;
         }
         // If there aren't, render the end game screen.
         else {
